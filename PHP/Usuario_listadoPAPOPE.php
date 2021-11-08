@@ -7,8 +7,9 @@ $_GET['email_usuario'] = (isset($_GET['email_usuario'])) ? $_GET['email_usuario'
 
 
 include "menuPAPOPE.php";
+include "stykePAPOPE.php";
 ?>
-<h1>Listado de Usuarios</h1>
+<h1 class="titulo-usuario">Listado de Usuarios</h1>
 <form action="usuario_listadoPAPOPE.php" method="GET">
 	Nombre: <input name="nombre_usuario" value="<?php echo $_GET['nombre_usuario']; ?>"> |/| 
 	apellido: <input name="apellido_usuario" value="<?php echo $_GET['apellido_usuario']; ?>"> |/| 

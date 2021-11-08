@@ -1,5 +1,5 @@
-<div id="header">
-	<ul class="nav">
+<div>
+	<ul>
 		
 		<?php if(isset($_SESSION['apellido_usuario'])) { ?>
 		</li>
@@ -15,8 +15,10 @@
 			<li><a href="logoutPAPOPE.php">Logout</a></li>
 		<?php }else{ ?>
 			<li><a href="loginPAPOPE.php">Login</a></li>
-		<?php } ?>
+		<?php } 
+		include "stykePAPOPE.php";?>
 	</ul>
+	
 </div>
 <br>
 <br>
