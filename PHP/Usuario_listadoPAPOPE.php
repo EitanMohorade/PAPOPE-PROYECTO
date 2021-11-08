@@ -7,7 +7,7 @@ $_GET['email_usuario'] = (isset($_GET['email_usuario'])) ? $_GET['email_usuario'
 
 
 include "menuPAPOPE.php";
-include "stykePAPOPE.php";
+
 ?>
 <h1 class="titulo-usuario">Listado de Usuarios</h1>
 <form action="usuario_listadoPAPOPE.php" method="GET">
@@ -34,6 +34,7 @@ $res = consulta($conn, $sql);
 ?>
 <table border="1">
 	<tr>
+		<th>id</th>
 		<th>Nombre</th>
 		<th>apellido</th>
 		<th>telefono</th>
@@ -42,10 +43,12 @@ $res = consulta($conn, $sql);
 	</tr>
 	<?php while($fila = mysqli_fetch_assoc($res)){ ?>
 	<tr>
+		<td><?php echo $fila['usuario_id']; ?></td>
+		<td><?php echo $fila['email_usuario']; ?></td>
 		<td><?php echo $fila['nombre_usuario']; ?></td>
 		<td><?php echo $fila['apellido_usuario']; ?></td>
 		<td><?php echo $fila['telefono_usuario']; ?></td>
-		<td><?php echo $fila['email_usuario']; ?></td>
+		
 		
 	</tr>
 	<?php } ?>

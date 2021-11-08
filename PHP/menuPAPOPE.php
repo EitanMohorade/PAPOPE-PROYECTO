@@ -3,26 +3,40 @@
 		
 		<?php if(isset($_SESSION['apellido_usuario'])) { ?>
 		</li>
-		<?php } ?>
-		<li><a href="usuario_listadoPAPOPE.php">usuarios</a>
-			<ul>
-				<li><a href="usuario_listadoPAPOPE.php">Listado</a></li>
+		
+		
+			
+				<?php } ?>
 				
-			</ul>
-		</li>
 		
 		<?php if(isset($_SESSION['apellido_usuario'])) { ?>
+		
 			<li><a href="logoutPAPOPE.php">Logout</a></li>
+			
+			<li><a href="usuario_listadoPAPOPE.php">usuarios</a></li>
+			
+			<li><a href="listadoturnosPAPOPE.php">turnos</a></li>
+			
 		<?php }else{ ?>
+		
+			<li><a href="signup.php">signup</a></li>
+			
 			<li><a href="loginPAPOPE.php">Login</a></li>
-		<?php } 
-		include "stykePAPOPE.php";?>
+			
+		<?php }
+		
+		include "stylePAPOPE.php";
+		
+		?>
+		
 	</ul>
 	
 </div>
 <br>
 <br>
-<?php if(isset($_SESSION['apellido_usuario'])) {echo $_SESSION['apellido_usuario'].", ".$_SESSION['nombre_usuario']; }?>
+<?php if(isset($_SESSION['apellido_usuario'])) {echo $_SESSION['apellido_usuario'].", ".$_SESSION['nombre_usuario'].", "; }
+
+		if(isset($_SESSION['usuario_id'])) {echo $_SESSION['usuario_id']; }?>
 
 <br>
 <br>

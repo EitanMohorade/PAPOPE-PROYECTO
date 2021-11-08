@@ -25,4 +25,5 @@ function consulta($conn, $sql){
 	
 	return $res;
 }
+
 ?>
