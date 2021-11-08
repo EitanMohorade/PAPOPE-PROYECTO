@@ -37,7 +37,7 @@ $res = consulta($conn, $sql);
 		<th>apellido</th>
 		<th>telefono</th>
 		<th>email</th>
-		<th>accion</th>
+		
 	</tr>
 	<?php while($fila = mysqli_fetch_assoc($res)){ ?>
 	<tr>
@@ -45,7 +45,7 @@ $res = consulta($conn, $sql);
 		<td><?php echo $fila['apellido_usuario']; ?></td>
 		<td><?php echo $fila['telefono_usuario']; ?></td>
 		<td><?php echo $fila['email_usuario']; ?></td>
-		<td>editar | eliminar</td>
+		
 	</tr>
 	<?php } ?>
 </table>
