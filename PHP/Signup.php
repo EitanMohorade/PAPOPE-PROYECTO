@@ -16,20 +16,22 @@ Telefono: <input type="text" name="tel_reg">
 <input type="submit">
 </form>
 <?php
-$sql = "INSERT INTO usuarios 
-		VALUES 
-		(NULL, '"
-		.$_POST["nom_reg"]."', '"
-		.$_POST["apel_reg"]."', '"
-		.$_POST["em_reg"]."', '"
-		.$_POST["pass_reg"]."', '"
-		.$_POST["tel_reg"]."'
-		, NULL)";
-		
 
+if(count($_POST)>0){
+	$sql = "INSERT INTO usuarios 
+	VALUES 
+	(NULL, '"
+	.$_POST["nom_reg"]."', '"
+	.$_POST["apel_reg"]."', '"
+	.$_POST["em_reg"]."', '"
+	.$_POST["pass_reg"]."', '"
+	.$_POST["tel_reg"]."'
+	, NULL)";
 $res = consulta($conn, $sql);
+header('Location: loginPAPOPE.php');
+}
 
-
+function validreg()
 
 ?>
 
