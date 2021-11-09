@@ -11,11 +11,7 @@ include "menuPAPOPE.php";
 
 
 $sql = "SELECT * 
-		FROM usuarios 
-		WHERE nombre_usuario LIKE '%" . $_SESSION['nombre_usuario'] . "%' AND
-		apellido_usuario LIKE '%" . $_SESSION['apellido_usuario'] . "%' AND
-		telefono_usuario LIKE '%" .$_SESSION['telefono_usuario']. "%' AND
-		email_usuario LIKE '%" .$_SESSION['email_usuario']. "%'";
+		FROM usuarios ";
 
 $res = consulta($conn, $sql);
 

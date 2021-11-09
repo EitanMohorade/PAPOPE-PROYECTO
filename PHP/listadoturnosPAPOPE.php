@@ -26,7 +26,7 @@
 	
 		<td><?php echo $fila['dia_turno']; ?></td>
 		<td><?php echo $fila['hora_turno']; ?></td>
-		<td>editar | <a herf="turnos_eliminar.php">eliminar</td>
+		<td>editar | <a herf="turnoseliminarPAPOPE.php">eliminar</td>
 		
 	</tr>
 	<?php } ?>
