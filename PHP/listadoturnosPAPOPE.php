@@ -2,6 +2,7 @@
 		require_once "papopeconexion.php";
 		include "menuPAPOPE.php";
 ?>
+<h1 class="titulos">turnos</h1>
 <?php
 
 		$sql= "SELECT *
