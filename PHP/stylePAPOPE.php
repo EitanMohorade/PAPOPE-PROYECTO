@@ -5,9 +5,15 @@ body {
   background-color: lightblue;
 }
 
-.titulo-usuario{
+.titulos{
   color: white;
   text-align: center;
+}
+
+.titulo-pagina{
+  color: rgb(199, 20, 139);
+  text-align: center;
+
 }
 
 

@@ -14,7 +14,7 @@ if(isset($_POST['password_usuario']) && isset($_POST['email_usuario'])){
         $_SESSION = mysqli_fetch_assoc($res);
         header('Location: Usuario_listadoPAPOPE.php');
     }else{
-        $error = "Usuario incorrecto";
+        $error = "Usuario incorrecto y/o clave";
     }
 }
 

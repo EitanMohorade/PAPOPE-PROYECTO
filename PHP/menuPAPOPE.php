@@ -1,12 +1,7 @@
 <div>
 	<ul>
 		
-		<?php if(isset($_SESSION['apellido_usuario'])) { ?>
-		</li>
-		
-		
-			
-				<?php } ?>
+	<h1 class="titulo-pagina">PAPOPESPORTS</h1>
 				
 		
 		<?php if(isset($_SESSION['apellido_usuario'])) { ?>
@@ -34,9 +29,9 @@
 </div>
 <br>
 <br>
-<?php if(isset($_SESSION['apellido_usuario'])) {echo $_SESSION['apellido_usuario'].", ".$_SESSION['nombre_usuario'].", "; }
+<?php if(isset($_SESSION['apellido_usuario'])) {echo "apellido: ".$_SESSION['apellido_usuario']." nombre: ".$_SESSION['nombre_usuario']; }
 
-		if(isset($_SESSION['usuario_id'])) {echo $_SESSION['usuario_id']; }?>
+		if(isset($_SESSION['usuario_id'])) {echo "  id:" .$_SESSION['usuario_id']; }?>
 
 <br>
 <br>
