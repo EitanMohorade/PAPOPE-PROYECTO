@@ -3,19 +3,20 @@ require_once "papopeconexion.php";
 include "menuPAPOPE.php";
 ?>
 <form method="POST">
-Nombre: <input type="text" name="nom_reg">
+Nombre: <input type="text" name="nom_reg" required>
 <br>
-Apellido: <input type="text" name="apel_reg">
+Apellido: <input type="text" name="apel_reg" required>
 <br>
-Email (Obligatorio): <input type="text" name="em_reg">
+Email: <input type="text" name="em_reg" required>
 <br>
-Contraseña: <input type="password" name="pass_reg">
+Contraseña: <input type="password" name="pass_reg" required>
 <br>
-Telefono: <input type="text" name="tel_reg">
+Telefono: <input type="text" name="tel_reg" required>
 <br>
 <input type="submit">
 </form>
 <?php
+if(count($_POST)>0){
 $sql = "INSERT INTO usuarios 
 		VALUES 
 		(NULL, '" 
@@ -31,8 +32,6 @@ $res = consulta($conn, $sql);
 
 header('Location: loginPAPOPE.php');
 }
-
-function validreg()
 
 ?>
 
