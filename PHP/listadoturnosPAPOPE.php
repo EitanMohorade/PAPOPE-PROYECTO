@@ -18,7 +18,7 @@
 	<tr>
 		<th>dia</th>
 		<th>hora</th>
-
+		<th>acciones</th>
 		
 	</tr>
 	<?php while($fila = mysqli_fetch_assoc($res)){ ?>
