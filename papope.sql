@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2021 a las 20:18:22
--- Versión del servidor: 10.4.18-MariaDB
--- Versión de PHP: 8.0.3
+-- Tiempo de generación: 09-11-2021 a las 19:37:18
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -88,7 +88,7 @@ CREATE TABLE `turnos` (
   `turno_id` int(100) NOT NULL,
   `usuario_id` int(100) NOT NULL,
   `dia_turno` date NOT NULL,
-  `hora_turno` date NOT NULL,
+  `hora_turno` time NOT NULL,
   `club_id` int(100) NOT NULL,
   `turno_deleted_at` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -115,7 +115,10 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`usuario_id`, `nombre_usuario`, `apellido_usuario`, `email_usuario`, `password_usuario`, `telefono_usuario`, `usuario_deleted_at`) VALUES
 (1, 'marcelo', 'marcelinal', 'caca@gmail.com', '123', 412142, '0000-00-00'),
-(2, 'Fede', 'Delga', 'fedelva8@gmail.com', 'caquita123', 2147483647, NULL);
+(2, 'Federico', 'Delgado', 'fedelva8@gmail.com', 'caquita123', 2147483647, NULL),
+(3, 'Eitan', 'Mohorade', 'eitanluc@gmail.com', '123123', 1138585182, NULL),
+(4, 'Juan', 'Mansilla', 'juanmansilla@gmail.com', '123123123', 1167584573, NULL),
+(5, 'Nicolas', 'Jaime', 'nicolasjaime@gmail.com', '1234', 1157489758, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -195,7 +198,7 @@ ALTER TABLE `turnos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `usuario_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `usuario_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
