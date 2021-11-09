@@ -13,6 +13,7 @@ Contraseña: <input type="password" name="pass_reg">
 <br>
 Telefono: <input type="text" name="tel_reg">
 <br>
+<a href=""></a>
 <input type="submit">
 </form>
 <?php
