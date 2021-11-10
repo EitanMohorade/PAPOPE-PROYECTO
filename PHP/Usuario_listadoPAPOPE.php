@@ -17,7 +17,7 @@ $res = consulta($conn, $sql);
 
 
 ?>
-<table border="1">
+<table>
 	<tr>
 		<th>id</th>
 		<th>email</th>
