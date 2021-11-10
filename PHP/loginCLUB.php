@@ -5,8 +5,8 @@ $error = "";
 if(isset($_POST['password_usuario']) && isset($_POST['email_usuario'])){
     $sql = "SELECT * 
             FROM usuarios 
-            WHERE password_usuario='".$_POST['password_usuario']."' 
-            AND email_usuario='".$_POST['email_usuario']."'";
+            WHERE password_usuario='".$_SESSION['password_usuario']."' 
+            AND email_usuario='".$_SESSION['info_contacto']."'";
             
     $res = consulta($conn, $sql);
 
@@ -26,7 +26,7 @@ include "menuCLUB.php";
     <table>
         <tr>
             <td>Correo:</td>
-            <td><input type="text" name="email_usuario"></td>
+            <td><input type="text" name="info_contacto"></td>
         </tr>
         <tr>
             <td>Clave:</td>

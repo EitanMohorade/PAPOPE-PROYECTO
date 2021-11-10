@@ -1,6 +1,6 @@
 <?php
 require_once "papopeconexion.php";
-include "menuPAPOPE.php";
+include "menuUSUARIO.php";
 ?>
 <form method="POST">
 Nombre: <input type="text" name="nom_reg" required>
