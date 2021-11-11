@@ -1,6 +1,13 @@
 
+
+.div-tit{
+  background-color: rgb(64, 53, 129);
+  margin: 0 auto;
+  width: 40%;
+}
+
 body {
-  background-color: rgb(242, 137, 105);
+  background-color: rgb(255, 226, 209);
   @import url(https://fonts.googleapis.com/css2?family=Dongle&display=swap);
 }
 
@@ -12,21 +19,28 @@ body {
 .titulo-pagina{
   color: rgb(199, 20, 139);
   text-align: center;
-
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-table, td, th {  
+ td, th {  
   border: 10px solid #ddd;
   text-align: left;
   background-color: rgb(245, 214, 163);
 }
 
-table {
+table{
   border-collapse: collapse;
-  width: 100%;
+  width: 50%;
   font-family: Dongle, sans-serif;
-  font-size: 40px;
+  font-size: 20px;
+  margin: 0 auto;
 }
 
 th, td {
-  padding: 15px;
+  padding: 12px;
+}
+
+.bot{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
 }

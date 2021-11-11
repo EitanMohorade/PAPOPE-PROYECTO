@@ -33,12 +33,10 @@ include "menuUSUARIO.php";
             <td><input type="password" name="password_usuario"></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="submit"></td>
+            <td colspan="2"><input type="submit" class="bot"></td>
         </tr>
         <tr>
             <td colspan="2"><?php echo $error; ?></td>
         </tr>
     </table>
 </form>
-<?php
-?>
