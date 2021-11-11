@@ -1,4 +1,5 @@
-<?php
+
+.<?php
 		require_once "papopeconexion.php";
 		include "menuUSUARIO.php";
 ?>
@@ -23,10 +24,10 @@
 	</tr>
 	<?php while($fila = mysqli_fetch_assoc($res)){ ?>
 	<tr>
-	
 		<td><?php echo $fila['dia_turno']; ?></td>
 		<td><?php echo $fila['hora_turno']; ?></td>
-		<td>editar | <a herf="turnoseliminarPAPOPE.php">eliminar</td>
+		<td>editar | <a href="turnoseliminarPAPOPE.php?turnos_id=<?php echo $fila['turno_id'];?>">eliminar </a></td>
+
 		
 	</tr>
 	<?php } ?>
