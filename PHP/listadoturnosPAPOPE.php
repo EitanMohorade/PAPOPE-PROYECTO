@@ -8,7 +8,7 @@
 
 		$sql= "SELECT *
 			FROM turnos
-			WHERE cuenta_id = ".$_SESSION['id_cuenta'];
+			WHERE cuenta_id = ".$_SESSION['id_cuenta']." AND turno_deleted_at IS NULL";
 
 		$res = consulta($conn, $sql);
 
