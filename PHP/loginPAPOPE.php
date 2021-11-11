@@ -2,11 +2,11 @@
 
 require_once "papopeconexion.php";
 $error = "";
-if(isset($_POST['password_usuario']) && isset($_POST['email_usuario'])){
+if(isset($_POST['password_cuenta']) && isset($_POST['contacto_cuenta'])){
     $sql = "SELECT * 
-            FROM usuarios 
-            WHERE password_usuario='".$_POST['password_usuario']."' 
-            AND email_usuario='".$_POST['email_usuario']."'";
+            FROM cuentas 
+            WHERE password_cuenta='".$_SESSION['password_cuenta']."' 
+            AND contacto_cuenta='".$_SESSION['contacto_cuenta']."'";
             
     $res = consulta($conn, $sql);
 
@@ -26,14 +26,14 @@ include "menuUSUARIO.php";
     <table>
         <tr>
             <td>Correo:</td>
-            <td><input type="text" name="email_usuario"></td>
+            <td><input type="text" name="contacto_cuenta"></td>
         </tr>
         <tr>
             <td>Clave:</td>
-            <td><input type="password" name="password_usuario"></td>
+            <td><input type="password" name="password_cuenta"></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="submit" class="bot"></td>
+            <td colspan="2"><input type="submit"></td>
         </tr>
         <tr>
             <td colspan="2"><?php echo $error; ?></td>

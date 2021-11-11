@@ -8,7 +8,7 @@
 	<h1 class="titulo-pagina">PAPOPESPORTS</h1>
 	</div>
 		
-		<?php if(isset($_SESSION['apellido_usuario'])) { ?>
+		<?php if(isset($_SESSION['apellido_contacto'])) { ?>
 		
 			<li><a href="logoutPAPOPE.php"><input type="button" value="Logout" class="bot"></a></li>
 			
@@ -32,9 +32,9 @@
 </div>
 <br>
 <br>
-<?php if(isset($_SESSION['apellido_usuario'])) {echo "apellido: ".$_SESSION['apellido_usuario']." nombre: ".$_SESSION['nombre_usuario']; }
+<?php if(isset($_SESSION['apellido_contacto'])) {echo "apellido: ".$_SESSION['apellido_contacto']." nombre: ".$_SESSION['nombre_contacto']; }
 
-		if(isset($_SESSION['usuario_id'])) {echo "  id:" .$_SESSION['usuario_id']; }?>
+		if(isset($_SESSION['id_cuenta'])) {echo "  id:" .$_SESSION['id_cuenta']; }?>
 
 <br>
 <br>

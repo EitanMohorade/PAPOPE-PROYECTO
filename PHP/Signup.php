@@ -19,7 +19,7 @@ Telefono: <input type="text" name="tel_reg" required>
 if(count($_POST)>0){
 $sql = "INSERT INTO usuarios 
 		VALUES 
-		(NULL, '" 
+		(NULL, 1, '" 
 		.$_POST["nom_reg"]."', '"
 		.$_POST["apel_reg"]."', '"
 		.$_POST["em_reg"]."', '"

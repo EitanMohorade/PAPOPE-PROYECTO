@@ -7,14 +7,14 @@
 require_once "papopeconexion.php";
 include "menuUSUARIO.php";
 ?>
-<h1 class="titulos">Listado de Usuarios</h1>
+<h1 class="titulos">Listado de cuentas</h1>
 
 
 <?php
 
 
 $sql = "SELECT * 
-		FROM usuarios ";
+		FROM cuentas ";
 
 $res = consulta($conn, $sql);
 
@@ -31,11 +31,11 @@ $res = consulta($conn, $sql);
 	</tr>
 	<?php while($fila = mysqli_fetch_assoc($res)){ ?>
 	<tr>
-		<td><?php echo $fila['usuario_id']; ?></td>
-		<td><?php echo $fila['email_usuario']; ?></td>
-		<td><?php echo $fila['nombre_usuario']; ?></td>
-		<td><?php echo $fila['apellido_usuario']; ?></td>
-		<td><?php echo $fila['telefono_usuario']; ?></td>
+		<td><?php echo $fila['id_cuenta']; ?></td>
+		<td><?php echo $fila['contacto_cuenta']; ?></td>
+		<td><?php echo $fila['nombre_cuenta']; ?></td>
+		<td><?php echo $fila['apellido_cuenta']; ?></td>
+		<td><?php echo $fila['telefono_cuenta']; ?></td>
 		
 		
 	</tr>
