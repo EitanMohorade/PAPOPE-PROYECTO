@@ -5,8 +5,8 @@ $error = "";
 if(isset($_POST['password_cuenta']) && isset($_POST['contacto_cuenta'])){
     $sql = "SELECT * 
             FROM cuentas 
-            WHERE password_cuenta='".$_SESSION['password_cuenta']."' 
-            AND contacto_cuenta='".$_SESSION['contacto_cuenta']."'";
+            WHERE password_cuenta='".$_POST['password_cuenta']."' 
+            AND contacto_cuenta='".$_POST['contacto_cuenta']."'";
             
     $res = consulta($conn, $sql);
 
@@ -22,6 +22,7 @@ include "menuUSUARIO.php";
 
 
 ?>
+
 <form method="POST">
     <table>
         <tr>
