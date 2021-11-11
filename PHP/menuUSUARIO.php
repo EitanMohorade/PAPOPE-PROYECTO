@@ -8,7 +8,7 @@
 	<h1 class="titulo-pagina">PAPOPESPORTS</h1>
 	</div>
 		
-		<?php if(isset($_SESSION['apellido_contacto'])) { ?>
+		<?php if(isset($_SESSION['apellido_cuenta'])) { ?>
 		
 			<li><a href="logoutPAPOPE.php"><input type="button" value="Logout" class="bot"></a></li>
 			
