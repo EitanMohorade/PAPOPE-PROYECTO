@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2021 a las 19:01:44
+-- Tiempo de generación: 11-11-2021 a las 19:20:01
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -127,7 +127,7 @@ CREATE TABLE `turnos` (
   `dia_turno` date NOT NULL,
   `hora_turno` date NOT NULL,
   `club_id` int(100) NOT NULL,
-  `turno_deleted_at` date NOT NULL
+  `turno_deleted_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -136,7 +136,9 @@ CREATE TABLE `turnos` (
 
 INSERT INTO `turnos` (`turno_id`, `usuario_id`, `dia_turno`, `hora_turno`, `club_id`, `turno_deleted_at`) VALUES
 (1, 2, '2021-11-17', '2021-11-15', 1, '0000-00-00'),
-(2, 1, '2021-11-25', '2021-11-16', 2, '0000-00-00');
+(2, 1, '2021-11-25', '2021-11-16', 2, '0000-00-00'),
+(3, 1, '0000-00-00', '0000-00-00', 2, '0000-00-00'),
+(4, 1, '0000-00-00', '0000-00-00', 2, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -204,7 +206,7 @@ ALTER TABLE `tipo_cuentas`
 -- AUTO_INCREMENT de la tabla `turnos`
 --
 ALTER TABLE `turnos`
-  MODIFY `turno_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `turno_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

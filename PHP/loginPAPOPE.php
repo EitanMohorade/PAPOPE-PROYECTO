@@ -22,6 +22,7 @@ include "menuUSUARIO.php";
 
 
 ?>
+
 <form method="POST">
     <table>
         <tr>

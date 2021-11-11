@@ -34,7 +34,7 @@
 <br>
 <?php if(isset($_SESSION['apellido_contacto'])) {echo "apellido: ".$_SESSION['apellido_contacto']." nombre: ".$_SESSION['nombre_contacto']; }
 
-		if(isset($_SESSION['id_cuenta'])) {echo "  id:" .$_SESSION['id_cuenta']; }?>
+		?>
 
 <br>
 <br>
