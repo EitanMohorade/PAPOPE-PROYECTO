@@ -14,7 +14,7 @@ include "menuUSUARIO.php";
 
 
 $sql = "SELECT * 
-		FROM usuarios ";
+		FROM cuentas ";
 
 $res = consulta($conn, $sql);
 
