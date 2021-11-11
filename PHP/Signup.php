@@ -28,7 +28,7 @@ $sql = "INSERT INTO cuentas
 		, NULL)";
 		
 
-$res = consulta($conn, $sql);
+ $res = consulta($conn, $sql);
 
 header('Location: loginPAPOPE.php');
 }
