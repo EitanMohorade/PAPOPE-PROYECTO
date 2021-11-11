@@ -1,8 +1,11 @@
+<html>
+<head>
+  <link rel="stylesheet" href="stylePAPOPE.css">
+</head>
 <?php
 //TODO ESTO ES PARA LOS ADMINS
 require_once "papopeconexion.php";
-include "menuPAPOPE.php";
-
+include "menuUSUARIO.php";
 ?>
 <h1 class="titulos">Listado de Usuarios</h1>
 
@@ -38,3 +41,4 @@ $res = consulta($conn, $sql);
 	</tr>
 	<?php } ?>
 </table>
+</html>

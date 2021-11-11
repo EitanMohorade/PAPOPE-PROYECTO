@@ -20,7 +20,6 @@
 			
 		<?php }
 		
-		include "stylePAPOPE.php";
 		
 		?>
 		

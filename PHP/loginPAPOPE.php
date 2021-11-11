@@ -19,7 +19,7 @@ if(isset($_POST['password_usuario']) && isset($_POST['email_usuario'])){
 }
 
 include "menuUSUARIO.php";
-include "menuCLUB.php";
+
 
 ?>
 <form method="POST">
