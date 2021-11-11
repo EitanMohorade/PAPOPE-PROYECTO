@@ -26,7 +26,7 @@
 
 echo $_POST["dia"] . $_POST["horario"]. $_POST["club"];
 
-$sql = "";
+$sql = "INSERT INTO turnos VALUES (null, null," . $_POST['dia'] . "," . $_POST['horario'] . "," . $_POST['club'] . ", null)";
 $res = mysqli_query($conn, $sql);
 
 function insertar(){}
