@@ -4,11 +4,11 @@
 
 ?>
 
-<form action="post">
+<form action="sacarTurno.php" method="post">
 
-    Día: <input type="text"><br><br>
-    Horario: <input type="text"><br><br>
-    <select>
+    Día: <input type="text" name="dia"><br><br>
+    Horario: <input type="text" name="horario"><br><br>
+    <select name = "club">
     
         <?php 
         
@@ -17,7 +17,17 @@
         while($fila = mysqli_fetch_assoc($res)){
             echo "<option>" . $fila['nombre_club'] . "</option>";
         }?>
-
+        <option>a</option>
     </select>
-    <input type="submit">
+    <input type="submit" onclick="" value="Suma">
 </form>
+
+<?php
+
+echo $_POST["dia"] . $_POST["horario"]. $_POST["club"];
+
+$sql = "";
+$res = mysqli_query($conn, $sql);
+
+function insertar(){}
+?>

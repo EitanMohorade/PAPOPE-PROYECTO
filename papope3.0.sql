@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2021 a las 18:11:00
--- Versión del servidor: 10.4.20-MariaDB
--- Versión de PHP: 8.0.9
+-- Tiempo de generación: 11-11-2021 a las 19:01:44
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `cuentas` (
   `id_cuenta` int(11) NOT NULL,
   `tipo_id_cuenta` int(11) NOT NULL,
+  `id_club` int(11) DEFAULT NULL,
   `nombre_cuenta` varchar(50) NOT NULL,
   `apellido_cuenta` varchar(50) NOT NULL,
   `contacto_cuenta` text NOT NULL,
