@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2021 a las 19:20:01
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.10
+-- Tiempo de generación: 11-11-2021 a las 23:17:37
+-- Versión del servidor: 10.4.18-MariaDB
+-- Versión de PHP: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,6 +38,13 @@ CREATE TABLE `cuentas` (
   `telefono_cuenta` varchar(30) NOT NULL,
   `deleted_at_cuenta` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `cuentas`
+--
+
+INSERT INTO `cuentas` (`id_cuenta`, `tipo_id_cuenta`, `id_club`, `nombre_cuenta`, `apellido_cuenta`, `contacto_cuenta`, `password_cuenta`, `telefono_cuenta`, `deleted_at_cuenta`) VALUES
+(1, 1, NULL, 'a', 'a', 'a', 'a', 'a', NULL);
 
 -- --------------------------------------------------------
 
@@ -123,9 +130,9 @@ INSERT INTO `tipo_cuentas` (`tipo_id_cuenta`, `tipo_cuenta`) VALUES
 
 CREATE TABLE `turnos` (
   `turno_id` int(100) NOT NULL,
-  `usuario_id` int(100) NOT NULL,
+  `cuenta_id` int(100) NOT NULL,
   `dia_turno` date NOT NULL,
-  `hora_turno` date NOT NULL,
+  `hora_turno` time NOT NULL,
   `club_id` int(100) NOT NULL,
   `turno_deleted_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -134,11 +141,11 @@ CREATE TABLE `turnos` (
 -- Volcado de datos para la tabla `turnos`
 --
 
-INSERT INTO `turnos` (`turno_id`, `usuario_id`, `dia_turno`, `hora_turno`, `club_id`, `turno_deleted_at`) VALUES
-(1, 2, '2021-11-17', '2021-11-15', 1, '0000-00-00'),
-(2, 1, '2021-11-25', '2021-11-16', 2, '0000-00-00'),
-(3, 1, '0000-00-00', '0000-00-00', 2, '0000-00-00'),
-(4, 1, '0000-00-00', '0000-00-00', 2, NULL);
+INSERT INTO `turnos` (`turno_id`, `cuenta_id`, `dia_turno`, `hora_turno`, `club_id`, `turno_deleted_at`) VALUES
+(1, 2, '2021-11-17', '00:00:00', 1, '0000-00-00'),
+(2, 1, '2021-11-25', '19:13:42', 2, '0000-00-00'),
+(3, 1, '0000-00-00', '00:00:00', 2, '0000-00-00'),
+(4, 1, '0000-00-00', '00:00:00', 2, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -182,7 +189,7 @@ ALTER TABLE `turnos`
 -- AUTO_INCREMENT de la tabla `cuentas`
 --
 ALTER TABLE `cuentas`
-  MODIFY `id_cuenta` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cuenta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `deportes`

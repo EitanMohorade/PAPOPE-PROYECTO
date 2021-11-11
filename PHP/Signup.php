@@ -18,14 +18,7 @@ Telefono: <input type="text" name="tel_reg" required>
 <?php
 if(count($_POST)>0){
 $sql = "INSERT INTO cuentas 
-		VALUES 
-		(NULL, 1, '" 
-		.$_POST["nom_reg"]."', '"
-		.$_POST["apel_reg"]."', '"
-		.$_POST["em_reg"]."', '"
-		.$_POST["pass_reg"]."', '"
-		.$_POST["tel_reg"]."'
-		, NULL)";
+		VALUES (NULL, 1, NULL, '".$_POST['nom_reg']."', '".$_POST['apel_reg']."', '".$_POST['em_reg']."', '".$_POST['pass_reg']."', '".$_POST['tel_reg']."', NULL )";
 		
 
  $res = consulta($conn, $sql);

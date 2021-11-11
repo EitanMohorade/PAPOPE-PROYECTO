@@ -3,19 +3,19 @@
 		require_once "papopeconexion.php";
 		include "menuUSUARIO.php";
 ?>
-<h1 class="titulos">turnos</h1>
+<h1 class="titulos">Turnos</h1>
 <?php
 
 		$sql= "SELECT *
 			FROM turnos
-			WHERE usuario_id = ".$_SESSION['usuario_id'];
+			WHERE cuenta_id = ".$_SESSION['id_cuenta'];
 
 		$res = consulta($conn, $sql);
 
 
 
 ?>
-<table border="1">
+<table border="1" class="listturn">
 	<tr>
 		<th>dia</th>
 		<th>hora</th>
