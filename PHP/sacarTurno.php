@@ -1,6 +1,7 @@
 <?php
 
     require_once("papopeconexion.php");
+    include("menuUSUARIO.php")
 
 ?>
 
