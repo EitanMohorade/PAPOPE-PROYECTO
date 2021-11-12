@@ -1,7 +1,7 @@
 <?php
 
     require_once("papopeconexion.php");
-    include("menuUSUARIO.php")
+    include("menuUSUARIO.php");
 
 ?>
 
@@ -12,25 +12,24 @@
     <select name = "club">
     
         <?php 
-        
-        $sql = "SELECT `nombre_cuenta` FROM `cuentas` WHERE tipo_id_cuenta = 2";
-        $res = mysqli_query($conn, $sql);
-        while($fila = mysqli_fetch_assoc($res)){
-            echo "<option>" . $fila['nombre_club'] . "</option>";
+
+            $sql = "SELECT nombre_cuenta FROM cuentas WHERE tipo_id_cuenta = '2'";
+            $res = consulta($conn, $sql);
+            while($fila = mysqli_fetch_assoc($res)){
+            echo "<option>" . $fila['nombre_cuenta'] . "</option>";
+
         }?>
-        <option>a</option>
     </select>
-    <input type="submit" onclick="" value="Suma">
+    <input type="submit" onclick="" value="Submit">
 </form>
 
 <?php
 
-echo $_POST["dia"] . $_POST["horario"]. $_POST["club"];
-
-$sql = "INSERT INTO turnos VALUES (null, null," . $_POST['dia'] . "," . $_POST['horario'] . "," . $_POST['club'] . ", null)";
-$res = mysqli_query($conn, $sql);
-
-function insertar(){}
+if(isset($_POST["dia"]) && isset($_POST["horario"]) && isset($_POST["club"])){
+    $sql = "INSERT INTO turnos VALUES (null, 1,'" . $_POST['dia'] . "','" . $_POST['horario'] . "','" . $_POST['club'] . "', null)";
+    /* $sql = "INSERT INTO turnos VALUES (null, null,' . $_POST["dia"] . ',' . $_POST["horario"] . ',' . $_POST["club"] . ', null)"; */
+    $res = consulta($conn, $sql);
+}
 ?>
 
  
