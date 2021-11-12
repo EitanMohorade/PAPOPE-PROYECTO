@@ -1,7 +1,7 @@
 
 .<?php
 		require_once "papopeconexion.php";
-		include "menuUSUARIO.php";
+		include "sacarTurno.php";
 ?>
 <h1 class="titulos">Turnos</h1>
 <?php
