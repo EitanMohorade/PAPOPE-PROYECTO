@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2021 a las 23:17:37
--- Versión del servidor: 10.4.18-MariaDB
--- Versión de PHP: 8.0.3
+-- Tiempo de generación: 12-11-2021 a las 02:12:55
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,7 +44,9 @@ CREATE TABLE `cuentas` (
 --
 
 INSERT INTO `cuentas` (`id_cuenta`, `tipo_id_cuenta`, `id_club`, `nombre_cuenta`, `apellido_cuenta`, `contacto_cuenta`, `password_cuenta`, `telefono_cuenta`, `deleted_at_cuenta`) VALUES
-(1, 1, NULL, 'a', 'a', 'a', 'a', 'a', NULL);
+(3, 2, 1, 'papirulo', 'jfeoisagh', '', '', '', NULL),
+(4, 2, 2, 'ernesti', 'eiugqrugba', '', '', '', NULL),
+(5, 1, NULL, '4', '4', '4', '4', '4', NULL);
 
 -- --------------------------------------------------------
 
@@ -142,10 +144,16 @@ CREATE TABLE `turnos` (
 --
 
 INSERT INTO `turnos` (`turno_id`, `cuenta_id`, `dia_turno`, `hora_turno`, `club_id`, `turno_deleted_at`) VALUES
-(1, 2, '2021-11-17', '00:00:00', 1, '0000-00-00'),
-(2, 1, '2021-11-25', '19:13:42', 2, '0000-00-00'),
-(3, 1, '0000-00-00', '00:00:00', 2, '0000-00-00'),
-(4, 1, '0000-00-00', '00:00:00', 2, NULL);
+(53, 5, '2021-11-17', '00:05:00', 0, NULL),
+(54, 5, '2021-11-17', '00:05:00', 0, NULL),
+(55, 1, '2021-11-17', '00:05:00', 0, NULL),
+(56, 5, '2021-11-17', '00:05:00', 0, NULL),
+(57, 5, '2021-11-17', '00:05:00', 0, NULL),
+(58, 1, '2021-11-17', '00:05:00', 0, NULL),
+(59, 1, '2021-11-17', '00:05:00', 0, NULL),
+(60, 1, '2021-11-17', '00:05:00', 0, NULL),
+(61, 1, '2021-11-17', '00:05:00', 0, NULL),
+(62, 1, '2021-11-17', '00:05:00', 0, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -189,7 +197,7 @@ ALTER TABLE `turnos`
 -- AUTO_INCREMENT de la tabla `cuentas`
 --
 ALTER TABLE `cuentas`
-  MODIFY `id_cuenta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_cuenta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `deportes`
@@ -213,7 +221,7 @@ ALTER TABLE `tipo_cuentas`
 -- AUTO_INCREMENT de la tabla `turnos`
 --
 ALTER TABLE `turnos`
-  MODIFY `turno_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `turno_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

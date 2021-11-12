@@ -26,7 +26,7 @@
 <?php
 
 if(isset($_POST["dia"]) && isset($_POST["horario"]) && isset($_POST["club"])){
-    $sql = "INSERT INTO turnos VALUES (null, 1,'" . $_POST['dia'] . "','" . $_POST['horario'] . "','" . $_POST['club'] . "', null)";
+    $sql = "INSERT INTO turnos VALUES (null,". $_SESSION['id_cuenta'].",'" . $_POST['dia'] . "','" . $_POST['horario'] . "','" . $_POST['club'] . "', null)";
     $res = consulta($conn, $sql);
 }
 ?>
