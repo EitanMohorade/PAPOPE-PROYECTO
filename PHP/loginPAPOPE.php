@@ -26,7 +26,7 @@ include "menuUSUARIO.php";
 <form method="POST">
     <table>
         <tr>
-            <td>Correo:</td>
+            <td >Correo:</td>
             <td><input type="text" name="contacto_cuenta"></td>
         </tr>
         <tr>
@@ -34,7 +34,7 @@ include "menuUSUARIO.php";
             <td><input type="password" name="password_cuenta"></td>
         </tr>
         <tr>
-            <td colspan="2" style="text-align: center;"><input type="submit"></td>
+            <td colspan="2" style="text-align: center;"><input type="submit" class="bot"></td>
         </tr>
     </table>
 </form>

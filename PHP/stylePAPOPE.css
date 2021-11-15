@@ -9,6 +9,10 @@
 body {
   background-color: rgb(255, 226, 209);
   @import url(https://fonts.googleapis.com/css2?family=Dongle&display=swap);
+  background-image:url(../PHP/abstract-blurred-fitness-or-gym-background-free-photo.jpg); 
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: 1600px;
 }
 
 
@@ -35,6 +39,7 @@ table{
   font-family: Dongle, sans-serif;
   font-size: 20px;
   margin: 0 auto;
+  border-radius: 10px;
 }
 
 th, td {
@@ -47,6 +52,7 @@ th, td {
   font-size: 30px;
   margin: 5px;
   height: 50px;
+  border-radius: 20px;
 }
 
 .bot:hover{

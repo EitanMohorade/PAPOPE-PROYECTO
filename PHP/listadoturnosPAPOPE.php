@@ -1,5 +1,5 @@
 
-.<?php
+<?php
 		require_once "papopeconexion.php";
 		include "sacarTurno.php";
 ?>
@@ -14,9 +14,9 @@
 ?>
 <table border="1" class="listturn">
 	<tr>
-		<th>dia</th>
-		<th>hora</th>
-		<th>acciones</th>
+		<th>Dia</th>
+		<th>Hora</th>
+		<th>Acciones</th>
 		
 	</tr>
 	<?php while($fila = mysqli_fetch_assoc($res)){ ?>
