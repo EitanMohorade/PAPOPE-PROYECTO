@@ -22,11 +22,11 @@ $res = consulta($conn, $sql);
 ?>
 <table>
 	<tr>
-		<th>id</th>
-		<th>email</th>
+		<th>Id</th>
+		<th>Email</th>
 		<th>Nombre</th>
-		<th>apellido</th>
-		<th>telefono</th>
+		<th>Apellido</th>
+		<th>Telefono</th>
 		
 	</tr>
 	<?php while($fila = mysqli_fetch_assoc($res)){ ?>

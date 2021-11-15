@@ -11,9 +11,11 @@ body {
   @import url(https://fonts.googleapis.com/css2?family=Dongle&display=swap);
 }
 
+
 .titulos{
   color: black;
   text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .titulo-pagina{
@@ -40,7 +42,15 @@ th, td {
 }
 
 .bot{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color:mediumslateblue;
+  font-size: 30px;
+  margin: 5px;
+  height: 50px;
+}
 
+.bot:hover{
+  opacity: 70%;
 
 }
+
