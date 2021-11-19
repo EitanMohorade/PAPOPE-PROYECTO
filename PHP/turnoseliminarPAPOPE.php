@@ -10,3 +10,4 @@ $sql = "UPDATE turnos SET turno_deleted_at = NOW() WHERE turno_id = '".$_GET['tu
 consulta($conn,$sql);
 header("Location: listadoturnosPAPOPE.php");
 ?>
+	
