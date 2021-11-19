@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-11-2021 a las 02:12:55
+-- Tiempo de generación: 18-11-2021 a las 17:56:03
 -- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.12
+-- Versión de PHP: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,15 +39,6 @@ CREATE TABLE `cuentas` (
   `deleted_at_cuenta` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `cuentas`
---
-
-INSERT INTO `cuentas` (`id_cuenta`, `tipo_id_cuenta`, `id_club`, `nombre_cuenta`, `apellido_cuenta`, `contacto_cuenta`, `password_cuenta`, `telefono_cuenta`, `deleted_at_cuenta`) VALUES
-(3, 2, 1, 'papirulo', 'jfeoisagh', '', '', '', NULL),
-(4, 2, 2, 'ernesti', 'eiugqrugba', '', '', '', NULL),
-(5, 1, NULL, '4', '4', '4', '4', '4', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -76,6 +67,34 @@ INSERT INTO `deportes` (`deporte_id`, `deporte`) VALUES
 (10, 'natacion'),
 (11, 'handball'),
 (12, 'hockey');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `pedir_turno`
+--
+
+CREATE TABLE `pedir_turno` (
+  `id_club` int(255) NOT NULL,
+  `nombre_cuenta` varchar(255) NOT NULL,
+  `dia_disponible` varchar(9) NOT NULL,
+  `hora_entrada` time NOT NULL,
+  `hora_salida` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `pedir_turno`
+--
+
+INSERT INTO `pedir_turno` (`id_club`, `nombre_cuenta`, `dia_disponible`, `hora_entrada`, `hora_salida`) VALUES
+(1, 'papirulo', 'jueves', '01:00:00', '02:00:00'),
+(1, 'papirulo', 'jueves', '15:00:00', '16:00:00'),
+(1, 'papirulo', 'miercoles', '18:00:00', '19:00:00'),
+(1, 'papirulo', 'miercoles', '03:00:00', '04:00:00'),
+(2, 'ernesti', 'martes', '02:00:00', '03:00:00'),
+(2, 'ernesti', 'martes', '13:00:00', '14:00:00'),
+(2, 'ernesti', 'sabado', '17:00:00', '18:00:00'),
+(2, 'ernesti', 'sabado', '06:00:00', '07:00:00');
 
 -- --------------------------------------------------------
 
@@ -132,9 +151,9 @@ INSERT INTO `tipo_cuentas` (`tipo_id_cuenta`, `tipo_cuenta`) VALUES
 
 CREATE TABLE `turnos` (
   `turno_id` int(100) NOT NULL,
-  `cuenta_id` int(100) NOT NULL,
+  `usuario_id` int(100) NOT NULL,
   `dia_turno` date NOT NULL,
-  `hora_turno` time NOT NULL,
+  `hora_turno` date NOT NULL,
   `club_id` int(100) NOT NULL,
   `turno_deleted_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -143,17 +162,11 @@ CREATE TABLE `turnos` (
 -- Volcado de datos para la tabla `turnos`
 --
 
-INSERT INTO `turnos` (`turno_id`, `cuenta_id`, `dia_turno`, `hora_turno`, `club_id`, `turno_deleted_at`) VALUES
-(53, 5, '2021-11-17', '00:05:00', 0, NULL),
-(54, 5, '2021-11-17', '00:05:00', 0, NULL),
-(55, 1, '2021-11-17', '00:05:00', 0, NULL),
-(56, 5, '2021-11-17', '00:05:00', 0, NULL),
-(57, 5, '2021-11-17', '00:05:00', 0, NULL),
-(58, 1, '2021-11-17', '00:05:00', 0, NULL),
-(59, 1, '2021-11-17', '00:05:00', 0, NULL),
-(60, 1, '2021-11-17', '00:05:00', 0, NULL),
-(61, 1, '2021-11-17', '00:05:00', 0, NULL),
-(62, 1, '2021-11-17', '00:05:00', 0, NULL);
+INSERT INTO `turnos` (`turno_id`, `usuario_id`, `dia_turno`, `hora_turno`, `club_id`, `turno_deleted_at`) VALUES
+(1, 2, '2021-11-17', '2021-11-15', 1, '0000-00-00'),
+(2, 1, '2021-11-25', '2021-11-16', 2, '0000-00-00'),
+(3, 1, '0000-00-00', '0000-00-00', 2, '0000-00-00'),
+(4, 1, '0000-00-00', '0000-00-00', 2, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -197,7 +210,7 @@ ALTER TABLE `turnos`
 -- AUTO_INCREMENT de la tabla `cuentas`
 --
 ALTER TABLE `cuentas`
-  MODIFY `id_cuenta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_cuenta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `deportes`
@@ -221,7 +234,7 @@ ALTER TABLE `tipo_cuentas`
 -- AUTO_INCREMENT de la tabla `turnos`
 --
 ALTER TABLE `turnos`
-  MODIFY `turno_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `turno_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
