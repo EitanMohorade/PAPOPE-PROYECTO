@@ -5,8 +5,8 @@
 
 ?>
 
-<form action="elegir_club.php" method="post">
+<form action="elegir_club.php" method="POST">
 
-    <input type="submit" value="Pedir Turno">
+    <input type="submit" value="Sacar Turno">
 
 </form>
