@@ -37,10 +37,13 @@
 
 <?php
 
-    if(isset($_POST["dia"]) && isset($_POST["horario"]) && isset($_POST["club"])){
-        $sql = "INSERT INTO turnos VALUES (null,'". $_SESSION['id_cuenta']."','" . $_POST['dia'] . "','" . $_POST['hora_entrada'] . "','" . $_POST['hora_salida'] . "','" . $_POST['club'] . "', null)";
+    if(isset($_POST["dia"]) && isset($_POST["horario_entrada"]) && isset($_POST["horario_salida"]) && isset($_POST["club"])){
+        $sql = "INSERT INTO `turnos` VALUES (5,5,'jueves','00:00:00','00:00:00',5,null)";
         $res = consulta($conn, $sql);
         header('Location: listadoturnosPAPOPE.php');
     };
 
 ?>
+
+
+<!-- ". $_SESSION['id_cuenta']." -->
